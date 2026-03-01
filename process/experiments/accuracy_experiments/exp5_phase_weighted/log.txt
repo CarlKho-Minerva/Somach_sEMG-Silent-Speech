@@ -1,0 +1,36 @@
+============================================================
+  EXP 5: Phase-Weighted Curriculum (Cosine Annealing)
+  (Intra-session only — avoids electrode shift)
+============================================================
+✅ 1500 samples | Classes: [np.str_('DOWN'), np.str_('LEFT'), np.str_('NOISE'), np.str_('RIGHT'), np.str_('SILENCE'), np.str_('UP')]
+   Phase_1_Overt: 300 files
+   Phase_2_Whispered: 300 files
+   Phase_3_Mouthing: 300 files
+   Phase_5_Exaggerated: 300 files
+   Phase_6_Covert: 300 files
+📊 1200 train / 300 test
+
+── BEFORE (Uniform Sampling) ── Known: 46.0%
+
+── AFTER (Phase-Weighted Cosine Annealing) ──
+   Epoch   0 | Train: 17.1% | Test: 16.7% | Easy_w: 1.00 | Hard_w: 0.20
+   Epoch  10 | Train: 39.2% | Test: 40.0% | Easy_w: 0.40 | Hard_w: 0.80
+   Weighted accuracy: 43.3%
+              precision    recall  f1-score   support
+
+        DOWN       0.33      0.50      0.40        50
+        LEFT       0.00      0.00      0.00        50
+       NOISE       0.49      0.54      0.51        50
+       RIGHT       0.40      0.04      0.07        50
+     SILENCE       0.64      0.90      0.75        50
+          UP       0.34      0.62      0.44        50
+
+    accuracy                           0.43       300
+   macro avg       0.37      0.43      0.36       300
+weighted avg       0.37      0.43      0.36       300
+
+
+============================================================
+  BEFORE (Uniform):    46.0%
+  AFTER  (Weighted):   43.3% (-2.7pp)
+============================================================

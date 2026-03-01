@@ -1,0 +1,38 @@
+/Users/cvk/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-jzt5aeoc because there was an issue with the default path (/Users/cvk/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/cvk/.cache/fontconfig
+	/Users/cvk/.fontconfig
+Fontconfig warning: ignoring en_US-u-hc-h12-u-ca-gregory-u-nu-latn: not a valid region tag
+Matplotlib is building the font cache; this may take a moment.
+============================================================
+  EXP 2: Feature Importance Analysis
+============================================================
+✅ 932 samples
+
+RF Accuracy: 56.1%
+              precision    recall  f1-score   support
+
+        DOWN       0.60      0.83      0.69        30
+        LEFT       0.29      0.23      0.26        30
+       NOISE       0.56      0.48      0.52        31
+       RIGHT       0.33      0.31      0.32        32
+     SILENCE       0.89      0.97      0.93        33
+          UP       0.57      0.52      0.54        31
+
+    accuracy                           0.56       187
+   macro avg       0.54      0.56      0.54       187
+weighted avg       0.54      0.56      0.55       187
+
+
+💾 Plot saved to /Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/results/feature_importance.png
+
+📊 TEMPORAL DISTRIBUTION OF IMPORTANCE:
+   Onset  (t=0-20):   100.0%
+   Pattern (t=20-80): 0.0%
+   Offset (t=80-100): 0.0%
+
+⚠️  CONCERN: Model relies heavily on signal ONSET.
+   It may be detecting jaw clench timing, not speech patterns.

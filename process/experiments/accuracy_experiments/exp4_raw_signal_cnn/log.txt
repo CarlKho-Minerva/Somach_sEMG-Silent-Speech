@@ -1,0 +1,34 @@
+============================================================
+  EXP 4: Raw Signal CNN (No MFCCs)
+============================================================
+✅ 932 samples | Shape: (932, 500, 2) | 2 channels
+   (Raw filtered signal, 500 samples/recording, no MFCC)
+📊 745 train / 187 test
+
+── Raw Signal CNN (4-layer, kernel 11/7/5/3) ──
+   Epoch   0 | Train: 29.5% | Test: 36.4%
+   Epoch  10 | Train: 61.2% | Test: 28.9%
+   Epoch  20 | Train: 67.9% | Test: 21.9%
+   Epoch  30 | Train: 83.5% | Test: 39.0%
+   ⏹️  Early stop ep 31. Best: 62.0%
+
+📋 Raw CNN Report:
+              precision    recall  f1-score   support
+
+        DOWN       0.75      0.60      0.67        30
+        LEFT       0.41      0.37      0.39        30
+       NOISE       0.44      0.84      0.58        31
+       RIGHT       0.31      0.12      0.18        32
+     SILENCE       0.78      0.85      0.81        33
+          UP       0.71      0.65      0.68        31
+
+    accuracy                           0.57       187
+   macro avg       0.57      0.57      0.55       187
+weighted avg       0.57      0.57      0.55       187
+
+
+============================================================
+  BEFORE (MFCC CNN):  62.0%
+  AFTER  (Raw CNN):   62.0% (+0.0pp)
+  ✅ Raw signal > MFCCs! Spectral features discard useful info.
+============================================================

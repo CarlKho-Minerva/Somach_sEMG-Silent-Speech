@@ -1,0 +1,152 @@
+
+============================================================
+  RUNNING: Experiment 1: SpecAugment
+============================================================
+
+Traceback (most recent call last):
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp1_specaugment/run.py", line 25, in <module>
+    from utils.model import EMG_CNN
+ModuleNotFoundError: No module named 'utils'
+
+  ⏱️  Experiment 1: SpecAugment completed in 5.1s (exit=1)
+
+============================================================
+  RUNNING: Experiment 2: Feature Importance
+============================================================
+
+/Users/cvk/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-sdct8kct because there was an issue with the default path (/Users/cvk/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/cvk/.cache/fontconfig
+	/Users/cvk/.fontconfig
+Fontconfig warning: ignoring en_US-u-hc-h12-u-ca-gregory-u-nu-latn: not a valid region tag
+Matplotlib is building the font cache; this may take a moment.
+============================================================
+  EXP 2: Feature Importance Analysis
+============================================================
+✅ 0 samples
+Traceback (most recent call last):
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 176, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 87, in main
+    X_tr,X_te,y_tr,y_te=train_test_split(X,y,test_size=0.2,random_state=SEED,stratify=y)
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/model_selection/_split.py", line 2924, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        n_samples, test_size, train_size, default_test_size=0.25
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/model_selection/_split.py", line 2504, in _validate_shuffle_split
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+
+  ⏱️  Experiment 2: Feature Importance completed in 12.8s (exit=1)
+
+============================================================
+  RUNNING: Experiment 3: Permutation Integrity
+============================================================
+
+============================================================
+  EXP 3: Permutation Importance — Integrity Check
+============================================================
+✅ 0 samples
+Traceback (most recent call last):
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 153, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 82, in main
+    X_tr,X_te,y_tr,y_te=train_test_split(X,y,test_size=0.2,random_state=SEED,stratify=y)
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/model_selection/_split.py", line 2924, in train_test_split
+    n_train, n_test = _validate_shuffle_split(
+                      ~~~~~~~~~~~~~~~~~~~~~~~^
+        n_samples, test_size, train_size, default_test_size=0.25
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/sklearn/model_selection/_split.py", line 2504, in _validate_shuffle_split
+    raise ValueError(
+    ...<3 lines>...
+    )
+ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+
+  ⏱️  Experiment 3: Permutation Integrity completed in 1.5s (exit=1)
+
+============================================================
+  RUNNING: Experiment 4: Raw Signal CNN
+============================================================
+
+Traceback (most recent call last):
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp4_raw_signal_cnn/run.py", line 13, in <module>
+    import scipy.signal
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/__init__.py", line 306, in <module>
+    from ._support_alternative_backends import *
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/_support_alternative_backends.py", line 7, in <module>
+    from ._signal_api import *   # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/_signal_api.py", line 16, in <module>
+    from ._spline_filters import *         # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/_spline_filters.py", line 14, in <module>
+    from ._signaltools import lfilter, sosfilt, lfiltic
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/_signaltools.py", line 16, in <module>
+    from ._ltisys import dlti
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/_ltisys.py", line 30, in <module>
+    from scipy.interpolate import make_interp_spline
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/interpolate/__init__.py", line 192, in <module>
+    from ._interpolate import *
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/interpolate/_interpolate.py", line 15, in <module>
+    from . import _fitpack_py
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/interpolate/_fitpack_py.py", line 10, in <module>
+    from ._bsplines import BSpline
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/interpolate/_bsplines.py", line 10, in <module>
+    from scipy.optimize import minimize_scalar
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/optimize/__init__.py", line 437, in <module>
+    from ._differentialevolution import differential_evolution
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/optimize/_differentialevolution.py", line 25, in <module>
+    @_transition_to_rng("seed", position_num=9)
+     ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/_lib/_util.py", line 385, in decorator
+    doc = str(doc).split("\n", 1)[1].lstrip(" \n")  # remove signature
+          ~~~^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/_lib/_docscrape.py", line 611, in __str__
+    out += super().__str__(func_role=self._role)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/scipy/_lib/_docscrape.py", line 568, in __str__
+    out += self._str_section(s)
+    ^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "<string>", line 17, in <module>
+    result = subprocess.run(
+        ['python3', '-u', 'run.py'],
+    ...<2 lines>...
+        text=True
+    )
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1212, in communicate
+    self.wait()
+    ~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1278, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2083, in _wait
+    (pid, sts) = self._try_wait(0)
+                 ~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2041, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

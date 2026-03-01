@@ -1,0 +1,26 @@
+📁 Loading sessions...
+   A: 932 | B: 298 | C: 300 | Total: 1530
+
+════════════════════════════════════════════════════════════
+  TEST 1: Single-Session (Train A, Test A)
+════════════════════════════════════════════════════════════
+   Epoch   0 | Train: 16.8% | Test: 17.6%
+   Epoch   5 | Train: 37.7% | Test: 36.4%
+   Epoch  10 | Train: 47.0% | Test: 55.1%
+   Epoch  15 | Train: 50.1% | Test: 55.6%
+   Epoch  20 | Train: 53.2% | Test: 51.9%
+
+📋 A-only: 57.2%
+              precision    recall  f1-score   support
+
+        DOWN       0.57      0.83      0.68        30
+        LEFT       0.20      0.07      0.10        30
+       NOISE       0.60      0.48      0.54        31
+       RIGHT       0.27      0.25      0.26        32
+     SILENCE       0.86      0.94      0.90        33
+          UP       0.55      0.74      0.63        31
+
+    accuracy                           0.56       187
+   macro avg       0.51      0.55      0.52       187
+weighted avg       0.51      0.56      0.52       187
+

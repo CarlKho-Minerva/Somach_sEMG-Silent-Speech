@@ -1,0 +1,27 @@
+============================================================
+  EXP 3: Permutation Importance — Integrity Check
+============================================================
+✅ 932 samples
+
+📊 Baseline RF accuracy: 56.1%
+
+============================================================
+  PER-CLASS PERMUTATION TEST
+  (Shuffle samples of one class, measure accuracy drop)
+============================================================
+
+         DOWN: Acc drop = +9.7% ± 1.3%  (n=30)  ✅ GOOD: Model relies on actual signal.
+         LEFT: Acc drop = +1.7% ± 1.2%  (n=30)  
+        NOISE: Acc drop = +5.3% ± 1.5%  (n=31)  ✅ GOOD: Model relies on actual signal.
+        RIGHT: Acc drop = +3.4% ± 0.7%  (n=32)  
+      SILENCE: Acc drop = +13.7% ± 1.1%  (n=33)  ✅ GOOD: Model relies on actual signal.
+           UP: Acc drop = +5.9% ± 0.8%  (n=31)  ✅ GOOD: Model relies on actual signal.
+
+============================================================
+  INTEGRITY ASSESSMENT
+============================================================
+
+✅  No suspect classes detected.
+
+✅  CLEAN classes (drop ≥ 3pp): [np.str_('DOWN'), np.str_('NOISE'), np.str_('RIGHT'), np.str_('SILENCE'), np.str_('UP')]
+   These are genuinely using MFCC signal content.

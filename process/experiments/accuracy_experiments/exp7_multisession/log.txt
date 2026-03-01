@@ -1,0 +1,97 @@
+============================================================
+  EXP 7: MULTI-SESSION ELECTRODE SHIFT RETRAINING
+============================================================
+
+📁 Loading Session A (Original placement)...
+   ✅ 932 samples (2 errors)
+📁 Loading Session B (1cm lower)...
+   ✅ 298 samples (2 errors)
+📁 Loading Session C (1cm lateral)...
+   ✅ 300 samples (0 errors)
+
+📊 Total: 1530 samples | 6 classes: [np.str_('DOWN'), np.str_('LEFT'), np.str_('NOISE'), np.str_('RIGHT'), np.str_('SILENCE'), np.str_('UP')]
+   Feature shape: (100, 26) (timesteps × channels)
+
+════════════════════════════════════════════════════════════
+  TEST 1: Single-Session Baseline (Train A, Test A)
+════════════════════════════════════════════════════════════
+   Epoch   0 | Train: 15.3% | Test: 26.2%
+   Epoch  10 | Train: 51.5% | Test: 54.5%
+   Epoch  20 | Train: 53.7% | Test: 50.8%
+   Epoch  30 | Train: 58.4% | Test: 57.2%
+   Epoch  40 | Train: 58.3% | Test: 61.0%
+
+📋 A-only accuracy: 62.0%
+              precision    recall  f1-score   support
+
+        DOWN       0.70      0.70      0.70        30
+        LEFT       0.28      0.17      0.21        30
+       NOISE       0.61      0.45      0.52        31
+       RIGHT       0.36      0.56      0.44        32
+     SILENCE       0.94      0.88      0.91        33
+          UP       0.60      0.68      0.64        31
+
+    accuracy                           0.58       187
+   macro avg       0.58      0.57      0.57       187
+weighted avg       0.58      0.58      0.57       187
+
+
+════════════════════════════════════════════════════════════
+  TEST 2: Cross-Session Test (Train A, Test B+C)
+════════════════════════════════════════════════════════════
+   Epoch   0 | Train: 15.5% | Test: 17.7%
+   Epoch  10 | Train: 51.9% | Test: 20.2%
+   Epoch  20 | Train: 56.8% | Test: 21.6%
+   Epoch  30 | Train: 60.0% | Test: 21.1%
+   Epoch  40 | Train: 60.9% | Test: 19.4%
+   ⏹️  Early stop ep 41. Best: 21.9%
+
+📋 Cross-session accuracy (A→B+C): 20.2%
+              precision    recall  f1-score   support
+
+        DOWN       0.16      0.40      0.23       100
+        LEFT       0.00      0.00      0.00       100
+       NOISE       0.25      0.56      0.35       100
+       RIGHT       0.30      0.08      0.13        99
+     SILENCE       0.27      0.17      0.21        99
+          UP       0.00      0.00      0.00       100
+
+    accuracy                           0.20       598
+   macro avg       0.16      0.20      0.15       598
+weighted avg       0.16      0.20      0.15       598
+
+
+════════════════════════════════════════════════════════════
+  TEST 3: Combined Training (Train A+B+C, Test held-out)
+════════════════════════════════════════════════════════════
+   Epoch   0 | Train: 15.4% | Test: 24.5%
+   Epoch  10 | Train: 40.8% | Test: 40.8%
+Traceback (most recent call last):
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 253, in <module>
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 206, in main
+  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 112, in train_cnn
+  File "/opt/homebrew/lib/python3.14/site-packages/torch/_tensor.py", line 630, in backward
+    torch.autograd.backward(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, gradient, retain_graph, create_graph, inputs=inputs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/torch/autograd/__init__.py", line 364, in backward
+    _engine_run_backward(
+    ~~~~~~~~~~~~~~~~~~~~^
+        tensors,
+        ^^^^^^^^
+    ...<5 lines>...
+        accumulate_grad=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/torch/autograd/graph.py", line 865, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+KeyboardInterrupt

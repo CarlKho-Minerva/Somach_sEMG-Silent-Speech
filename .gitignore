@@ -1,0 +1,9 @@
+# .gitignore
+__pycache__/
+*.pyc
+.DS_Store
+*.pth
+*.pkl
+.venv/
+.env
+*.zip

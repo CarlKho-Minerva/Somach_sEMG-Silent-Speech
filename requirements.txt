@@ -1,0 +1,12 @@
+# sEMG Silent Speech — Python Dependencies
+# Tested on Python 3.11+
+
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+torch>=2.0               # 1D CNN model + training pipeline
+librosa>=0.10             # MFCC feature extraction (rigorous_eval.py)
+scipy>=1.10               # signal processing (bandpass, FFT)
+matplotlib>=3.6
+seaborn>=0.12
+pyserial>=3.5             # live_demo.py, check_serial.py (ESP32 connection)

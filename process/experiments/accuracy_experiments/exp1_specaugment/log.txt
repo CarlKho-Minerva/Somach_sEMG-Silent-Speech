@@ -1,0 +1,33 @@
+============================================================
+  EXP 1: SpecAugment (Time + Frequency Masking)
+============================================================
+✅ 932 samples, (932, 100, 26) shape, [np.str_('DOWN'), np.str_('LEFT'), np.str_('NOISE'), np.str_('RIGHT'), np.str_('SILENCE'), np.str_('UP')]
+📊 745 train / 187 test
+
+── BEFORE (No Augmentation) ── Known: 62.0%
+
+── AFTER (SpecAugment: 2×time mask, 1×freq mask) ──
+   Epoch   0 | Train: 16.6% | Test: 16.6%
+   Epoch  10 | Train: 41.3% | Test: 51.9%
+   Epoch  20 | Train: 48.6% | Test: 54.5%
+   ⏹️  Early stop ep 26. Best: 59.4%
+
+📋 SpecAugment CNN Report:
+              precision    recall  f1-score   support
+
+        DOWN       0.53      1.00      0.69        30
+        LEFT       0.12      0.03      0.05        30
+       NOISE       0.58      0.45      0.51        31
+       RIGHT       0.28      0.22      0.25        32
+     SILENCE       0.86      0.94      0.90        33
+          UP       0.51      0.61      0.56        31
+
+    accuracy                           0.55       187
+   macro avg       0.48      0.54      0.49       187
+weighted avg       0.49      0.55      0.50       187
+
+
+============================================================
+  BEFORE: 62.0% (covert-only baseline)
+  AFTER:  59.4%  (-2.6pp)
+============================================================

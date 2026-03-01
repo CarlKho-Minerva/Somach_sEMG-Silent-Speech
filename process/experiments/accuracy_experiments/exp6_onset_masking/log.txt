@@ -1,0 +1,32 @@
+============================================================
+  EXP 6: ONSET MASKING (Forcing Middle Attention)
+============================================================
+✅ Loaded 932 samples. Shape: (932, 100, 26)
+🔪 Masked the first 30 timesteps (onset) to 0.0
+
+── BEFORE (Original CNN counting on Onset) ── Known: 62.0%
+
+── AFTER (Onset Masking - Middle Attention Only) ──
+   Epoch  0 | Train: 15.4% | Test: 16.0%
+   Epoch 10 | Train: 15.7% | Test: 16.6%
+   ⏹️  Early stop ep 17. Best: 17.6%
+
+📋 Onset Masked CNN Report:
+              precision    recall  f1-score   support
+
+        DOWN       0.00      0.00      0.00        30
+        LEFT       0.00      0.00      0.00        30
+       NOISE       0.00      0.00      0.00        31
+       RIGHT       0.00      0.00      0.00        32
+     SILENCE       0.18      1.00      0.30        33
+          UP       0.00      0.00      0.00        31
+
+    accuracy                           0.18       187
+   macro avg       0.03      0.17      0.05       187
+weighted avg       0.03      0.18      0.05       187
+
+
+============================================================
+  BEFORE (Unmasked): 62.0%
+  AFTER  (Masked):   17.6%  (-44.4pp)
+============================================================
