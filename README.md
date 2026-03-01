@@ -4,6 +4,8 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/Data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 > **arXiv Preprint IDs Pending Submission**
 
+<img width="2048" height="1046" alt="image" src="https://github.com/user-attachments/assets/bd73bf73-f488-4588-be3f-a5155c68ddf0" />
+
 This repository contains the **complete dataset, source code, evaluation pipeline, and LaTeX sources** for two companion papers on silent speech interface (SSI) classification using a \$40 consumer-grade sEMG system (2× AD8232 + ESP32).
 
 **Replication Guide:** [https://somach.vercel.app/editorial/complete-guide.html](https://somach.vercel.app/editorial/complete-guide.html)
