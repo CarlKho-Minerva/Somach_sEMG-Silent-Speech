@@ -23,21 +23,34 @@ Consumer-grade biosensors (AD8232 + ESP32, 12-bit ADC, 250 Hz) cost \$40 but int
 
 Cross-study transfer: 25–31% (near chance), establishing that electrode placement creates **fundamentally incompatible feature spaces** on consumer-grade ADCs.
 
+## 📄 Read the Papers (Pre-arXiv PDFs)
+
+> arXiv submissions planned after **March 20, 2026**. PDFs below are the final versions.
+
+| Paper | PDF | Key Result |
+|-------|-----|------------|
+| **Study B** — Curriculum Learning, Chin + Throat | [StudyB_CurriculumLearning_SilentSpeech_ChinThroat.pdf](StudyB_CurriculumLearning_SilentSpeech_ChinThroat.pdf) | 48.9% ± 3.1% CV · 64.1% gated |
+| **Study A** — Electrode Placement, Chin + Under-chin | [StudyA_ElectrodePlacement_LingualMandibular.pdf](StudyA_ElectrodePlacement_LingualMandibular.pdf) | 51.8% ± 2.8% CV · 18 configs benchmarked |
+
 ## Papers
 
 ### Paper 1 — Study B: Curriculum Learning with Chin + Throat Electrodes
-*20 pages, 5 figures, 18 references*
+*17 pages, 5 figures, 16 references*
 
 A 5-phase speech-intensity curriculum mapped to a 1D CNN, evaluated under 16 protocols including 5-fold CV, leave-one-phase-out, cross-session testing, hyperparameter sweep, architecture comparison, and confidence gating.
 
-- **LaTeX source:** [`papers/paper1_StudyB_ChinThroat/main.tex`](papers/paper1_StudyB_ChinThroat/main.tex)
+- **📄 PDF:** [StudyB_CurriculumLearning_SilentSpeech_ChinThroat.pdf](StudyB_CurriculumLearning_SilentSpeech_ChinThroat.pdf)
+- **LaTeX source (updated):** [`paper1_UPDATED/main.tex`](paper1_UPDATED/main.tex)
+- **LaTeX source (original):** [`papers/paper1_StudyB_ChinThroat/main.tex`](papers/paper1_StudyB_ChinThroat/main.tex)
 
 ### Paper 2 — Study A: Electrode Placement Comparison (Negative Result)
-*15 pages, 4 figures, 20 references*
+*13 pages, 4 figures, 19 references*
 
 A controlled comparison establishing that chin + under-chin (lingual-mandibular) electrodes achieve comparable single-session accuracy to chin + throat but fail on cross-study transfer due to shared CN V3 innervation and volume-conduction crosstalk.
 
-- **LaTeX source:** [`papers/paper2_StudyA_ChinUnderChin/main.tex`](papers/paper2_StudyA_ChinUnderChin/main.tex)
+- **📄 PDF:** [StudyA_ElectrodePlacement_LingualMandibular.pdf](StudyA_ElectrodePlacement_LingualMandibular.pdf)
+- **LaTeX source (updated):** [`paper2_UPDATED/main.tex`](paper2_UPDATED/main.tex)
+- **LaTeX source (original):** [`papers/paper2_StudyA_ChinUnderChin/main.tex`](papers/paper2_StudyA_ChinUnderChin/main.tex)
 
 ## Repository Structure
 
@@ -92,7 +105,17 @@ A controlled comparison establishing that chin + under-chin (lingual-mandibular)
 │   ├── p2_fig3_confusion_matrix.png
 │   └── p2_fig4_cross_study_transfer.png
 │
-├── papers/                           ← LaTeX sources + compiled PDFs
+├── paper1_UPDATED/                   ← Updated Paper 1 (arxiv.sty format)
+│   ├── main.tex
+│   ├── arxiv.sty
+│   └── figures/
+│
+├── paper2_UPDATED/                   ← Updated Paper 2 (arxiv.sty format)
+│   ├── main.tex
+│   ├── arxiv.sty
+│   └── figures/
+│
+├── papers/                           ← Original LaTeX sources + compiled PDFs
 │   ├── paper1_StudyB_ChinThroat/
 │   │   ├── main.tex
 │   │   ├── main_REFERENCE.pdf
@@ -116,12 +139,17 @@ A controlled comparison establishing that chin + under-chin (lingual-mandibular)
 
 ## Hardware
 
-| Component | Part | Cost |
-|-----------|------|------|
-| Microcontroller | ESP32 DevKit V1 | \$10 |
-| Biosensor × 2 | AD8232 breakout board | \$15 × 2 |
-| Electrodes | Ag/AgCl disposable pads | — |
-| **Total** | | **\$40** |
+| Component | Part | INR | USD | Role |
+|-----------|------|-----|-----|------|
+| Biosensor × 2 | AD8232 ECG breakout | ₹790 × 2 = ₹1,580 | $17.34 | Analog front-end |
+| Microcontroller | ESP32 NodeMCU DevKit | ₹549 | $6.03 | ADC + serial streaming |
+| Electrodes | Pediatric Ag/AgCl (50-pk) | ₹523 | $5.74 | Low-impedance skin contact |
+| Breadboard + wires | — | ₹279 | $3.06 | Prototyping connections |
+| USB-C cable | — | ₹198 | $2.17 | Power + serial data |
+| Extra breadboard | ESP32 mount | ₹67 | $0.74 | Dedicated mount |
+| **Total** | | **₹3,196** | **$35.09** | **Complete 2-ch sEMG system** |
+
+> All prices verified on Amazon India (February 2026). The "$40" figure in the papers is a conservative rounding.
 
 - **ADC:** 12-bit (0–4095), 250 Hz sampling rate
 - **Channels:** 2 differential (CH1: GPIO 34, CH2: GPIO 36)
@@ -157,8 +185,16 @@ python generate_all_figures.py
 ### Compiling Papers from LaTeX
 
 ```bash
-cd papers/paper1_StudyB_ChinThroat/
-pdflatex main.tex && pdflatex main.tex   # two passes for references
+# Updated papers (arxiv.sty format)
+cd paper1_UPDATED/
+pdflatex main.tex && pdflatex main.tex
+
+cd ../paper2_UPDATED/
+pdflatex main.tex && pdflatex main.tex
+
+# Original papers
+cd ../papers/paper1_StudyB_ChinThroat/
+pdflatex main.tex && pdflatex main.tex
 
 cd ../paper2_StudyA_ChinUnderChin/
 pdflatex main.tex && pdflatex main.tex
@@ -198,18 +234,16 @@ If you use this data, code, or build on this work, please cite:
 
 ```bibtex
 @article{kho2026curriculum,
-  title   = {Curriculum Learning for Ultra-Low-Cost Silent Speech
-             Classification: A 5-Phase sEMG Study with Consumer-Grade
-             Biosensors},
+  title   = {Curriculum Learning for Silent Speech Classification:
+             A Proof-of-Concept \$40 Two-Channel sEMG System},
   author  = {Kho, Carl Vincent Ladres},
   year    = {2026},
   note    = {arXiv preprint (submitted)}
 }
 
 @article{kho2026electrode,
-  title   = {Electrode Placement Boundaries for Ultra-Low-Cost Silent
-             Speech Interfaces: Why Under-Chin Channels Fail Cross-Study
-             Transfer},
+  title   = {Lingual-Mandibular Electrode Configuration for Silent Speech:
+             Throat Sensor Necessity on Consumer-Grade ADCs},
   author  = {Kho, Carl Vincent Ladres},
   year    = {2026},
   note    = {arXiv preprint (submitted)}
