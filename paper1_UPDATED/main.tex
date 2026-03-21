@@ -49,7 +49,7 @@
 % ABSTRACT
 % ============================================================
 \begin{abstract}
-Silent speech interfaces (SSIs) enable communication by detecting subvocal muscle activity without audible voice. State-of-the-art systems such as AlterEgo (Kapur et al., 2018) achieve 92\% word accuracy on a 10-digit vocabulary using 7-channel, 24-bit research hardware costing over \$1{,}000. This paper investigates the operational boundaries of a low-cost alternative: a two-channel surface electromyography (sEMG) system built from consumer-grade AD8232 ECG modules (\textasciitilde\$3 each) and a 12-bit ESP32 microcontroller (\$8), totaling \$40. The 12-bit quantization noise floor prevents the hardware from capturing continuous articulatory trajectories, limiting detection primarily to the transient neuromuscular motor initiation burst (Jou et al., 2006). A 5-phase speech-intensity curriculum mapped to a 1D CNN is evaluated under rigorous held-out protocols: \textbf{5-fold stratified blocked cross-validation yields 48.9\% $\pm$ 3.1\% on a 6-class vocabulary} (2.9$\times$ above the 16.7\% chance baseline), with multi-seed stability of $\pm$1.0\%. An initial training-set evaluation produced 99.7\% accuracy, confirming that the \textasciitilde47K-parameter CNN can memorize 1,500 samples. The held-out result establishes the true generalization boundary. Cross-session evaluation reveals that a 1\,cm electrode shift degrades accuracy to 22.8\% (near chance), while multi-session training with deliberate electrode repositioning recovers accuracy to \textbf{58.2\% $\pm$ 3.1\%}, which demonstrates learnable position-invariant onset features, though this improvement is partially driven by increased data volume. With confidence gating at $\theta = 0.60$, accuracy reaches \textbf{64.1\% on 62\% of accepted predictions}, a collaborative operating point requiring per-session user adaptation. A concurrent control study (Study~A) using chin-only electrodes achieves 51.8\% $\pm$ 2.8\% held-out accuracy, with cross-study transfer of only 25--31\%, establishing that electrode placement creates fundamentally incompatible feature spaces on consumer-grade ADCs.
+Silent speech interfaces (SSIs) enable communication by detecting subvocal muscle activity without audible voice. State-of-the-art systems such as AlterEgo (Kapur et al., 2018) achieve 92\% word accuracy on a 10-digit vocabulary using 7-channel, 24-bit research hardware costing over \$1{,}000. This paper investigates the operational boundaries of a low-cost alternative: a two-channel surface electromyography (sEMG) system built from consumer-grade AD8232 ECG modules (\textasciitilde\$3 each) and a 12-bit ESP32 microcontroller (\$8), totaling \$40. The 12-bit quantization noise floor prevents the hardware from capturing continuous articulatory trajectories, limiting detection primarily to the transient neuromuscular motor initiation burst (Jou et al., 2006). A 5-phase speech-intensity curriculum mapped to a 1D CNN is evaluated under rigorous held-out protocols: \textbf{5-fold stratified blocked cross-validation yields 48.9\% $\pm$ 3.1\% on a 6-class vocabulary} (2.9$\times$ above the 16.7\% chance baseline), with multi-seed stability of $\pm$1.0\,pp across 5 random seeds. An initial training-set evaluation produced 99.7\% accuracy, confirming that the \textasciitilde47K-parameter CNN can memorize 1,500 samples. The held-out result establishes the true generalization boundary. Cross-session evaluation reveals that a 1\,cm electrode shift degrades accuracy to 22.8\% (near chance), while multi-session training with deliberate electrode repositioning recovers accuracy to \textbf{58.2\% $\pm$ 3.1\%}, which demonstrates learnable position-invariant onset features, though this improvement is partially driven by increased data volume. With confidence gating at $\theta = 0.60$, accuracy reaches \textbf{64.1\% on 62\% of accepted predictions}, a collaborative operating point requiring per-session user adaptation. A concurrent control study (Study~A) using chin-only electrodes achieves 51.8\% $\pm$ 2.8\% held-out accuracy, with cross-study transfer of only 25--31\%, establishing that electrode placement creates fundamentally incompatible feature spaces on consumer-grade ADCs.
 \end{abstract}
 
 \keywords{silent speech interface \and surface electromyography \and quantization noise \and electrode shift \and confidence gating \and curriculum learning \and consumer hardware}
@@ -680,7 +680,7 @@ I emphasize three critical limitations:
 
 \textbf{2.\ Small vocabulary.} Six classes (4 commands + 2 artifact) is insufficient for text entry. Scaling to 20+ classes risks increased feature-space overlap. A 4-class experiment (dropping LEFT) improved accuracy to 57\%, suggesting that reducing confusable classes is more effective than adding data.
 
-\textbf{3.\ Moderate overfitting persists.} Even with optimal hyperparameters, the training-test accuracy gap is \textasciitilde25 percentage points (\textasciitilde75\% train vs.\ \textasciitilde49\% test). This reflects the fundamental limitation that \textasciitilde47K parameters trained on \textasciitilde1,200 training samples (80\% of 1,500) will always overfit somewhat. The learning curve saturates at \textasciitilde600 samples (Figure~\ref{fig:lcurve_note}), indicating that more data would reduce overfitting but \emph{not} raise the test accuracy ceiling; the bottleneck is hardware SNR.
+\textbf{3.\ Moderate overfitting persists.} Even with optimal hyperparameters, the training-test accuracy gap is \textasciitilde25 percentage points (\textasciitilde75\% train vs.\ \textasciitilde49\% test). This reflects the fundamental limitation that \textasciitilde47K parameters trained on \textasciitilde1,200 training samples (80\% of 1,500) will always overfit somewhat. The learning curve saturates at \textasciitilde600 samples (see learning curve data below in this section), indicating that more data would reduce overfitting but \emph{not} raise the test accuracy ceiling; the bottleneck is hardware SNR.
 
 \textbf{Additional limitations:}
 \begin{itemize}
@@ -690,7 +690,7 @@ I emphasize three critical limitations:
     \item \textbf{Practice / order confound.} Study~A was recorded immediately before Study~B on the same day. A counterbalanced design is planned.
 \end{itemize}
 
-\label{fig:lcurve_note}
+% Learning curve data (cited in \S\ref{sec:limitations} Limitation 3 above):
 \textbf{Learning curve observation:} When trained on 10\% of the data (120 samples), test accuracy is 24.3\% with 78.3\% training accuracy (54pp gap). At 100\% (1{,}200 training samples), test accuracy plateaus at 51.7\% with 71.8\% training accuracy (20pp gap). The gap narrows but the ceiling does not rise, providing direct evidence that the bottleneck is hardware SNR, not data quantity.
 
 \subsection{Statistical Power}
@@ -826,21 +826,27 @@ Espressif Systems, ``ESP32 Technical Reference Manual,'' v4.9, 2023.
 
 
 \bibitem{hristov2026}
-D.\ Hristov, T.\ Ganev, and K.\ Ivanov, ``Time2Vec transformer for robust gesture recognition from low-density sEMG,'' \emph{arXiv preprint}, arXiv:2602.01855, 2026.
+% VERIFIED 2026-03-21: arXiv:2602.01855 exists (Hristov et al., cs.LG, submitted 2 Feb 2026).
+B.\ Hristov, H.\ Gjoreski, V.\ Ojleska Latkoska, and G.\ Nadzinski, ``Time2Vec transformer for robust gesture recognition from low-density sEMG,'' \emph{arXiv preprint}, arXiv:2602.01855, 2026.
 
 \bibitem{kho2026companion}
-C.~V.~L.\ Kho, ``Lingual-mandibular electrode configuration for silent speech: Throat sensor necessity on consumer-grade ADCs,'' \emph{arXiv preprint} (companion paper, submitted concurrently), 2026.
+% TODO: Replace XXXX.XXXXX with Paper 2's arXiv ID once assigned (submit Paper 1 first, then update).
+C.~V.~L.\ Kho, ``Lingual-mandibular electrode configuration for silent speech: Throat sensor necessity on consumer-grade ADCs,'' \emph{arXiv preprint}, arXiv:XXXX.XXXXX (submitted concurrently), 2026.
 
 \bibitem{gaddy2020}
 D.\ Gaddy and D.\ Klein, ``Digital voicing of silent speech,'' in \emph{Proc.\ EMNLP}, 2020, pp.\ 5521--5530.
 
 \bibitem{biosense2016}
-N.\ Merrill, T.\ Chuang, and J.\ Chuang, ``Passthoughts authentication with low cost earEEG,'' in \emph{Proc.\ EMBC}, 2016.
+% VERIFIED 2026-03-21: DOI 10.1109/EMBC.2016.7591112 (Curran et al., EMBC 2016, pp. 1979-1982).
+M.~T.\ Curran, J.-K.\ Yang, N.\ Merrill, and J.\ Chuang, ``Passthoughts authentication with low cost EarEEG,'' in \emph{Proc.\ IEEE EMBC}, 2016, pp.\ 1979--1982.
 
 \bibitem{yousefi2022}
 F.\ Yousefi, ``Brain signal as a new biometric authentication method,'' Ph.D.\ dissertation, Liverpool John Moores University, 2022.
 
 \bibitem{palmgraffiti}
+% Non-peer-reviewed product reference. Acceptable for illustrative analogy; do not
+% treat as empirical evidence. For a peer-reviewed treatment of user adaptation in BCIs,
+% see also: Yin et al., J. Neural Eng., 2013 (user training for P300 BCIs).
 Palm Inc., ``Palm Pilot Personal and Professional,'' Product Release, 1997. Graffiti handwriting recognition system by Palm Computing (acquired by US~Robotics/3Com). Users learned a simplified stroke alphabet to reduce classifier variance.
 
 \end{thebibliography}

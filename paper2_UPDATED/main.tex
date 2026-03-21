@@ -110,7 +110,7 @@ See companion paper~\cite{kho2026companion} for extended related work. Reference
     \item \textbf{Kapur et al.\ (2018)}~\cite{kapur2018}: Ranked 30 positions; throat electrodes captured phonation intent distinguishable from articulatory noise. The frequently cited 92\% accuracy refers specifically to a 10-digit vocabulary (0--9) on 24-bit, 7-channel hardware costing over \$1{,}000.
     \item \textbf{Jou et al.\ (2006; 2007)}~\cite{jou2006,jou2007}: NASA Ames demonstrated 92\% mean accuracy (2007 ICASSP) on ``mouthed'' speech, where articulators moved normally but no sound was produced. They reported an inability to decode purely ``mentally rehearsed'' inner speech due to absence of detectable sEMG activity. This mouthed-vs-imagined boundary defines the floor for what peripheral sEMG can capture.
     \item \textbf{Wand \& Schultz (2014)}~\cite{wand2014}: EMG-based speech recognition using 6-channel arrays over facial muscles; reported 91\% accuracy on 50 words with audible speech but significant degradation in silent conditions.
-    \item \textbf{Sae Jong et al.\ (2018)}~\cite{saejong2018}: Investigated the specific contributions of submental muscles (mylohyoid, geniohyoid) to sEMG during articulatory tasks, confirming significant crosstalk and depth attenuation constraints.
+    \item \textbf{Sae Jong et al.\ (2018)}~\cite{saejong2018}: Investigated channel reduction strategies for sEMG-based speech recognition, demonstrating that fewer electrode channels can still capture discriminative articulatory information when placed on complementary muscle groups.
     \item \textbf{Schultz \& Wand (2010)}~\cite{schultz2010}: Identified that laryngeal sensors capture vocal fold tensioning distinct from suprahyoid articulatory signals, useful even during silent speech.
 \end{itemize}
 
@@ -459,7 +459,7 @@ I acknowledge a significant temporal confound between the two studies. Study~A w
 
 \subsection{Negative Results in SSI Research}
 
-Negative results are underreported in BCI and SSI literature. Lotte et al.\ (2020), writing from a major BCI society workshop, explicitly stated that ``the report of negative results is equally valuable for its further progress''~\cite{lotte2020}. Fessenden (2019) argued that ``failure to publish negative data ensures that dubious ideas and wrong-headed projects receive financial support with multiple groups toiling away in vain''~\cite{fessenden2019}. I report this failure deliberately because:
+Negative results are underreported in BCI and SSI literature. Lotte et al.\ (2020), writing from a major BCI society workshop, explicitly stated that ``the report of negative results is equally valuable for its further progress''~\cite{lotte2020}. Nimpf and Keays (2020) argued that negative results are essential to prevent wasteful duplication of effort across research groups~\cite{fessenden2019}. I report this failure deliberately because:
 \begin{enumerate}
     \item \textbf{It establishes a baseline.} Future work testing alternative chin-region configurations can compare against the 45\% figure.
     \item \textbf{It validates Study~B.} Without the control study, Study~B's high accuracy could be attributed to an easy classification task.
@@ -578,7 +578,8 @@ Thanks to Prof.\ Watson for advising this work. This work was partially supporte
 \begin{thebibliography}{20}
 
 \bibitem{kho2026companion}
-C.~V.~L.\ Kho, ``Curriculum learning for silent speech classification: A proof-of-concept \$40 two-channel sEMG system,'' \emph{arXiv preprint} (companion paper, submitted concurrently), 2026.
+% TODO: Replace XXXX.XXXXX with Paper 1's arXiv ID once assigned. Submit Paper 1 first, then update.
+C.~V.~L.\ Kho, ``Curriculum learning for silent speech classification: A proof-of-concept \$40 two-channel sEMG system,'' \emph{arXiv preprint}, arXiv:XXXX.XXXXX (submitted concurrently), 2026.
 
 \bibitem{kapur2018}
 A.\ Kapur, S.\ Kapur, and P.\ Maes, ``AlterEgo: A personalized wearable silent speech interface,'' in \emph{Proc.\ ACM IUI}, 2018, pp.\ 43--52.
@@ -602,6 +603,9 @@ P.~M.\ Palmer, E.~S.\ Luschei, D.\ Jaffe, and T.~M.\ McCulloch, ``Contributions 
 C.~E.\ Stepp, ``Surface electromyography for speech and swallowing systems: measurement, analysis, and interpretation,'' \emph{J.\ Speech, Language, and Hearing Research}, vol.~55, no.~4, pp.\ 1232--1246, 2012.
 
 \bibitem{ala2018}
+% Gray literature (clinical guideline, not peer-reviewed). Acceptable for illustrative
+% reference to clinical practice context. If a peer-reviewed alternative is preferred,
+% see: Blitzer et al., Laryngoscope, 2015 (LEMG clinical applications review).
 American Laryngological Association, ``Laryngeal Electromyography (LEMG),'' Clinical Learning Center, 2018.
 
 \bibitem{murphy1997}
@@ -614,7 +618,8 @@ G.~S.\ Meltzner, J.~T.\ Heaton, Y.\ Deng, G.\ De~Luca, S.~H.\ Roy, and J.~C.\ Kl
 F.\ Lotte, C.\ Jeunet, R.\ Chavarriaga et al., ``Turning negative into positives! Exploiting `negative' results in Brain--Machine Interface (BMI) research,'' \emph{Brain-Computer Interfaces}, vol.~6, no.~4, pp.\ 178--189, 2020.
 
 \bibitem{fessenden2019}
-T.\ Fessenden, ``The value of publishing negative data,'' \emph{EMBO Reports}, vol.~21, no.~1, e49775, 2019.
+% VERIFIED 2026-03-21: DOI 10.15252/embr.201949775. Online Dec 2019, print Jan 2020.
+S.\ Nimpf and D.~A.\ Keays, ``Why (and how) we should publish negative data,'' \emph{EMBO Reports}, vol.~21, no.~1, e49775, 2020.
 
 \bibitem{fanelli2012}
 D.\ Fanelli, ``Negative results are disappearing from most disciplines and countries,'' \emph{Scientometrics}, vol.~90, no.~3, pp.\ 891--904, 2012.
@@ -623,7 +628,8 @@ D.\ Fanelli, ``Negative results are disappearing from most disciplines and count
 D.\ Farina, R.\ Merletti, and R.~M.\ Enoka, ``The extraction of neural strategies from the surface EMG: An update,'' \emph{J.\ Applied Physiology}, vol.~117, no.~11, pp.\ 1215--1230, 2014.
 
 \bibitem{saejong2018}
-Y.\ Sae Jong et al., ``Muscle activation patterns during articulatory tasks: A submental surface EMG study,'' \emph{Journal of Oral Rehabilitation}, vol.\ 45, no.\ 8, 2018.
+% VERIFIED 2026-03-21: IEEE ECTI-CON 2018, DOI 10.1109/ECTICon.2018.8619947.
+N.\ Sae Jong, P.\ Phukpattaranont, and C.\ Limsakul, ``Channel reduction in speech recognition system based on surface electromyography,'' in \emph{Proc.\ 15th IEEE ECTI-CON}, 2018.
 
 \bibitem{chtourou2011}
 H.\ Chtourou et al., ``The effect of training at a specific time of day on muscle outcomes: A circadian rhythm perspective,'' \emph{Journal of Strength and Conditioning Research}, vol.\ 25, no.\ 12, 2011.
