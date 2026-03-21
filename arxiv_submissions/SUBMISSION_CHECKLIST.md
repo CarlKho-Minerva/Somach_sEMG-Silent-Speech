@@ -1,6 +1,6 @@
 # arXiv Submission Checklist
 **SOMACH Companion Papers — cs.HC**
-_Last updated: 2026-03-17_
+_Last updated: 2026-03-21_
 
 ---
 
@@ -10,24 +10,19 @@ These items are flagged in the `.tex` files with `% CITATION CHECK REQUIRED` com
 
 ### Paper 1 (`paper1_studyB_curriculum.tar.gz`)
 
-- [ ] **`hristov2026`** — Search arXiv for `2602.01855`. If it doesn't exist:
-  - Remove the `\cite{hristov2026}` in §1.2 Related Work (the sentence ending "...CNN-over-Transformer architectures for biosignal classification~\cite{hristov2026}").
-  - Delete the entire `\bibitem{hristov2026}` block.
-  - The claim is self-supported by your Table 3 results; removal doesn't weaken the paper.
+- [x] **`hristov2026`** — **VERIFIED.** arXiv:2602.01855 exists (Hristov, Gjoreski, Ojleska Latkoska, Nadzinski). Authors corrected from fabricated names. Title confirmed: "Time2Vec Transformer for Robust Gesture Recognition from Low-Density sEMG."
 
-- [ ] **`biosense2016`** — Verify: N. Merrill, A. Chuang, T. Chuang, "BioSense: A natural input device for biometric identification," EMBC 2016. Check page numbers. Suggested DOI in the `.tex` comment.
+- [x] **`biosense2016`** — **VERIFIED.** Correct authors: M.T. Curran, J.-K. Yang, N. Merrill, J. Chuang. Pages corrected 1834→1979-1982. DOI corrected to 10.1109/EMBC.2016.7591112.
 
-- [ ] **`palmgraffiti`** — Acceptable as a product reference; no action required unless you want to replace with a peer-reviewed cite.
+- [x] **`palmgraffiti`** — Acceptable as product reference. No change needed.
 
 ### Paper 2 (`paper2_studyA_electrode.tar.gz`)
 
-- [ ] **`saejong2018`** — Verify author name romanization in: Journal of Oral Rehabilitation, vol. 45, no. 8, 2018. Author listed as "K. Saejong et al." — confirm spelling and full first name in the journal.
+- [x] **`saejong2018`** — **FIXED.** Original entry was fabricated (no paper in J. Oral Rehab vol.45 no.8 by "Y. Sae Jong"). Replaced with real paper: N. Sae Jong, P. Phukpattaranont, C. Limsakul, "Channel reduction in speech recognition system based on surface electromyography," IEEE ECTI-CON 2018. DOI: 10.1109/ECTICon.2018.8619947. Related Work description updated to match.
 
-- [ ] **`ala2018`** — This is an ALA clinical practice guideline (gray literature, not peer-reviewed). Either:
-  - Keep as-is (acceptable for clinical context), OR
-  - Replace with: Blitzer et al., "Laryngoscope," 2015 — a peer-reviewed alternative noted in the `.tex` comment.
+- [x] **`ala2018`** — Kept as-is (gray literature, acceptable for clinical context). Comment in .tex notes Blitzer 2015 as peer-reviewed alternative.
 
-- [ ] **`fessenden2019`** — Verify print publication year of EMBO Reports e49775 (electronic pub date may be 2019 but print volume may be 2020). Check the journal page and confirm year matches your `\bibitem`.
+- [x] **`fessenden2019`** — **FIXED.** Actual authors: S. Nimpf and D.A. Keays (not T. Fessenden). Title: "Why (and how) we should publish negative data." Online Dec 2019, print Jan 2020 (vol.21 no.1). DOI: 10.15252/embr.201949775 confirmed. Year updated to 2020. In-text attribution changed to "Nimpf and Keays (2020)."
 
 ---
 
@@ -91,8 +86,8 @@ Canonical sources (submit from here):
   paper2_UPDATED/main.tex
 
 Archives to upload:
-  arxiv_submissions/paper1_studyB_curriculum.tar.gz   ← 968K ✅ rebuilt 2026-03-17
-  arxiv_submissions/paper2_studyA_electrode.tar.gz    ← 712K ✅ rebuilt 2026-03-17
+  arxiv_submissions/paper1_studyB_curriculum.tar.gz   ← 905K ✅ rebuilt 2026-03-21 (citations fixed)
+  arxiv_submissions/paper2_studyA_electrode.tar.gz    ← 697K ✅ rebuilt 2026-03-21 (citations fixed)
 
 Mirror copies (reference only):
   md-capstonefall25_25TPE/.../paper1_UPDATED/main.tex  ✅ synced
