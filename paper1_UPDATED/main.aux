@@ -25,14 +25,13 @@
 \citation{esp32adc}
 \citation{kapur2018}
 \citation{kapur2018}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Paper Organization}{3}{subsection.1.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Hardware}{3}{section.2}\protected@file@percent }
 \newlabel{sec:hardware}{{2}{3}{Hardware}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}System Overview}{3}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cost Comparison}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Itemized hardware bill of materials. All prices verified on Amazon India (February 2026); USD conversion at \$1 = INR\,91.15.}}{4}{table.caption.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Itemized hardware bill of materials. All prices verified on Amazon India (February 2026); USD conversion at \$1 = INR\,91.08.}}{4}{table.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:bom}{{1}{4}{Itemized hardware bill of materials. All prices verified on Amazon India (February 2026); USD conversion at \$1 = INR\,91.15}{table.caption.1}{}}
+\newlabel{tab:bom}{{1}{4}{Itemized hardware bill of materials. All prices verified on Amazon India (February 2026); USD conversion at \$1 = INR\,91.08}{table.caption.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Hardware comparison: AlterEgo vs.\ this work.}}{4}{table.caption.2}\protected@file@percent }
 \newlabel{tab:cost}{{2}{4}{Hardware comparison: AlterEgo vs.\ this work}{table.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Electrode Placement}{4}{subsection.2.3}\protected@file@percent }
@@ -57,13 +56,14 @@
 \newlabel{sec:curriculum}{{4}{6}{Curriculum Learning Protocol}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Motivation}{6}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}The Five-Phase Spectrum}{6}{subsection.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Five-phase curriculum design.}}{7}{table.caption.6}\protected@file@percent }
-\newlabel{tab:curriculum}{{5}{7}{Five-phase curriculum design}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Five-phase curriculum design with progressively smaller mouth movements.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:curriculum}{{5}{7}{Five-phase curriculum design with progressively smaller mouth movements}{table.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Speech intensity curriculum amplitude decay across the five training phases. Error bars represent the observed signal amplitude range. The dashed red line indicates the 12-bit ADC effective noise floor (\textasciitilde 10\,$\mu $V). Phase~5 (Exaggerated Subvocal) acts as the critical bridge phase.}}{7}{figure.caption.7}\protected@file@percent }
 \newlabel{fig:curriculum_amplitude}{{2}{7}{Speech intensity curriculum amplitude decay across the five training phases. Error bars represent the observed signal amplitude range. The dashed red line indicates the 12-bit ADC effective noise floor (\textasciitilde 10\,$\mu $V). Phase~5 (Exaggerated Subvocal) acts as the critical bridge phase}{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Vocabulary}{7}{subsection.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Six-class directional vocabulary.}}{7}{table.caption.8}\protected@file@percent }
-\newlabel{tab:vocab}{{6}{7}{Six-class directional vocabulary}{table.caption.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Six-class directional vocabulary with articulatory motor strategies.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:vocab}{{6}{7}{Six-class directional vocabulary with articulatory motor strategies}{table.caption.8}{}}
+\citation{palmgraffiti}
 \citation{kho2026prior}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Recording Sessions}{8}{subsection.4.4}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Recording session timeline.}}{8}{table.caption.9}\protected@file@percent }
@@ -80,9 +80,10 @@
 \newlabel{tab:training}{{9}{9}{Training hyperparameters}{table.caption.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Results}{9}{section.6}\protected@file@percent }
 \newlabel{sec:results}{{6}{9}{Results}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Training Curve}{9}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Training Convergence (Memorization Baseline)}{9}{subsection.6.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Per-Phase Evaluation}{9}{subsection.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Confusion Matrix (All Phases Combined)}{9}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:results_heldout}{{6.3}{9}{Confusion Matrix (All Phases Combined)}{subsection.6.3}{}}
 \citation{meltzner2017}
 \citation{kapur2018}
 \citation{meltzner2017}
@@ -123,7 +124,6 @@
 \newlabel{sec:limitations}{{7.3}{14}{Limitations and Threats to Validity}{subsection.7.3}{}}
 \citation{jou2006}
 \citation{yousefi2022}
-\newlabel{fig:lcurve_note}{{7.3}{15}{Limitations and Threats to Validity}{subsection.7.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Statistical Power}{15}{subsection.7.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.5}The Neuromuscular Onset Burst}{15}{subsection.7.5}\protected@file@percent }
 \newlabel{sec:onset}{{7.5}{15}{The Neuromuscular Onset Burst}{subsection.7.5}{}}
@@ -148,4 +148,5 @@
 \bibcite{gaddy2020}{14}
 \bibcite{biosense2016}{15}
 \bibcite{yousefi2022}{16}
+\bibcite{palmgraffiti}{17}
 \gdef \@abspage@last{17}

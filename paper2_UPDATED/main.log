@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 MAR 2026 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  21 MAR 2026 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -460,8 +460,7 @@ ef
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box59
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -482,6 +481,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -549,6 +549,7 @@ LaTeX Font Info:    ... okay on input line 42.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 42.
+(./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -569,6 +570,7 @@ LaTeX Info: Redefining \showhyphens on input line 42.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
@@ -627,103 +629,30 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-LaTeX Warning: Citation `kho2026companion' on page 1 undefined on input line 49
-.
-
-
-LaTeX Warning: Citation `kapur2018' on page 1 undefined on input line 61.
-
-
-LaTeX Warning: Citation `kapur2018' on page 1 undefined on input line 67.
-
-
-
 [1
 
 
 {/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/us
 r/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-
-LaTeX Warning: Citation `kho2026companion' on page 2 undefined on input line 75
-.
-
-
-LaTeX Warning: Reference `tab:design' on page 2 undefined on input line 75.
-
-
-LaTeX Warning: Citation `kho2026companion' on page 2 undefined on input line 83
-.
-
-<figures/p2_fig1_comparison.png, id=19, 1009.371pt x 363.759pt>
+<figures/p2_fig1_comparison.png, id=144, 1009.371pt x 363.759pt>
 File: figures/p2_fig1_comparison.png Graphic file (type png)
 <use figures/p2_fig1_comparison.png>
 Package pdftex.def Info: figures/p2_fig1_comparison.png  used on input line 101
 .
 (pdftex.def)             Requested size: 399.2946pt x 143.89693pt.
-
-LaTeX Warning: Citation `kho2026companion' on page 2 undefined on input line 10
-8.
-
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
 10.
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
-LaTeX Warning: Citation `kapur2018' on page 2 undefined on input line 110.
-
-
-LaTeX Warning: Citation `jou2006' on page 2 undefined on input line 111.
-
-
-LaTeX Warning: Citation `jou2007' on page 2 undefined on input line 111.
-
-
-LaTeX Warning: Citation `wand2014' on page 2 undefined on input line 112.
-
-
-LaTeX Warning: Citation `saejong2018' on page 2 undefined on input line 113.
-
-
-LaTeX Warning: Citation `schultz2010' on page 2 undefined on input line 114.
-
-
-
 [2 <./figures/p2_fig1_comparison.png>]
-
-LaTeX Warning: Citation `kho2026companion' on page 3 undefined on input line 12
-4.
-
-
-LaTeX Warning: Citation `stepp2012' on page 3 undefined on input line 143.
-
-
-LaTeX Warning: Reference `tab:innervation' on page 3 undefined on input line 14
-5.
-
-
-LaTeX Warning: Citation `kho2026companion' on page 3 undefined on input line 17
-2.
-
-
-LaTeX Warning: Citation `kho2026companion' on page 3 undefined on input line 19
-5.
-
-
 
 [3]
 
-LaTeX Warning: Citation `kho2026companion' on page 4 undefined on input line 20
-7.
-
-
-LaTeX Warning: Reference `tab:convergence' on page 4 undefined on input line 24
-9.
-
-
-
 [4]
-<figures/p2_fig2_training_curve.png, id=53, 509.0217pt x 346.6551pt>
+<figures/p2_fig2_training_curve.png, id=190, 509.0217pt x 346.6551pt>
 File: figures/p2_fig2_training_curve.png Graphic file (type png)
 <use figures/p2_fig2_training_curve.png>
 Package pdftex.def Info: figures/p2_fig2_training_curve.png  used on input line
@@ -732,13 +661,13 @@ Package pdftex.def Info: figures/p2_fig2_training_curve.png  used on input line
 
 
 [5 <./figures/p2_fig2_training_curve.png>]
-<figures/p2_fig3_confusion_matrix.png, id=65, 442.0515pt x 402.303pt>
+<figures/p2_fig3_confusion_matrix.png, id=199, 442.0515pt x 402.303pt>
 File: figures/p2_fig3_confusion_matrix.png Graphic file (type png)
 <use figures/p2_fig3_confusion_matrix.png>
 Package pdftex.def Info: figures/p2_fig3_confusion_matrix.png  used on input li
 ne 338.
 (pdftex.def)             Requested size: 328.82706pt x 299.27104pt.
-<figures/p2_fig4_per_phase.png, id=66, 447.3513pt x 314.6154pt>
+<figures/p2_fig4_per_phase.png, id=200, 447.3513pt x 314.6154pt>
 File: figures/p2_fig4_per_phase.png Graphic file (type png)
 <use figures/p2_fig4_per_phase.png>
 Package pdftex.def Info: figures/p2_fig4_per_phase.png  used on input line 364.
@@ -750,111 +679,34 @@ Package pdftex.def Info: figures/p2_fig4_per_phase.png  used on input line 364.
 
 [7 <./figures/p2_fig3_confusion_matrix.png>]
 
-LaTeX Warning: Citation `farina2014' on page 8 undefined on input line 425.
-
-
-LaTeX Warning: Citation `stepp2012' on page 8 undefined on input line 427.
-
-
-
 [8 <./figures/p2_fig4_per_phase.png>]
-
-LaTeX Warning: Citation `palmer1999' on page 9 undefined on input line 440.
-
-
-LaTeX Warning: Citation `stepp2012' on page 9 undefined on input line 440.
-
-
-LaTeX Warning: Citation `farina2014' on page 9 undefined on input line 442.
-
-
-LaTeX Warning: Citation `farina2014' on page 9 undefined on input line 444.
-
-
-LaTeX Warning: Citation `gaddy2020' on page 9 undefined on input line 444.
-
-
-LaTeX Warning: Citation `ala2018' on page 9 undefined on input line 448.
-
-
-LaTeX Warning: Citation `murphy1997' on page 9 undefined on input line 448.
-
-
-LaTeX Warning: Citation `meltzner2018' on page 9 undefined on input line 448.
-
-
-LaTeX Warning: Citation `chhetri2006' on page 9 undefined on input line 450.
-
-
-LaTeX Warning: Citation `kapur2018' on page 9 undefined on input line 454.
-
-
 
 [9]
 
-LaTeX Warning: Citation `chtourou2011' on page 10 undefined on input line 458.
-
-
-LaTeX Warning: Citation `lotte2020' on page 10 undefined on input line 462.
-
-
-LaTeX Warning: Citation `fessenden2019' on page 10 undefined on input line 462.
-
-
-
-LaTeX Warning: Citation `fanelli2012' on page 10 undefined on input line 467.
-
-
-
 [10]
-
-LaTeX Warning: Citation `palmer1999' on page 11 undefined on input line 521.
-
-
-LaTeX Warning: Citation `kapur2018' on page 11 undefined on input line 543.
-
-
-LaTeX Warning: Citation `saejong2018' on page 11 undefined on input line 547.
-
-
-LaTeX Warning: Citation `kho2026companion' on page 11 undefined on input line 5
-57.
-
-
 
 [11]
 
-[12]
-
-[13] (./main.aux)
+[12] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8ADDE665879E6B22610D312B51E99233;5160.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 8ADDE665879E6B22610D312B51E99233;5160.
  ) 
 Here is how much of TeX's memory you used:
- 16590 strings out of 474662
- 262074 string characters out of 5751110
- 695906 words of memory out of 5000000
- 39075 multiletter control sequences out of 15000+600000
- 606880 words of font info for 234 fonts, out of 8000000 for 9000
+ 16622 strings out of 474662
+ 262566 string characters out of 5751110
+ 699312 words of memory out of 5000000
+ 39108 multiletter control sequences out of 15000+600000
+ 606528 words of font info for 230 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 75i,12n,79p,1679b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1679b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/cvk/Library/texlive/2025basic/texmf-var/fonts/pk/ljfour/jknappen/ec/
 ectt1000.600pk></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/
@@ -869,10 +721,10 @@ sic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2025basic/t
 exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2025basic/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2025basic/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (13 pages, 853367 bytes).
+Output written on main.pdf (12 pages, 858669 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 195 compressed objects within 2 object streams
- 99 named destinations out of 1000 (max. 500000)
- 42517 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 427 PDF objects out of 1000 (max. 8388607)
+ 323 compressed objects within 4 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 42757 words of extra memory for PDF output out of 42996 (max. 10000000)
 
