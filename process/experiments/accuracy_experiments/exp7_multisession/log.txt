@@ -67,9 +67,9 @@ weighted avg       0.16      0.20      0.15       598
    Epoch   0 | Train: 15.4% | Test: 24.5%
    Epoch  10 | Train: 40.8% | Test: 40.8%
 Traceback (most recent call last):
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 253, in <module>
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 206, in main
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 112, in train_cnn
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 253, in <module>
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 206, in main
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp7_multisession/run.py", line 112, in train_cnn
   File "/opt/homebrew/lib/python3.14/site-packages/torch/_tensor.py", line 630, in backward
     torch.autograd.backward(
     ~~~~~~~~~~~~~~~~~~~~~~~^

@@ -3,7 +3,7 @@
 You asked for the **reason** based on the literature. Here is the evidence-based argument for why **Study B (Subvocal/Throat + Curriculum)** is the only viable path for your project, while Study A (Chin/Lingual) is likely to fail given your constraints.
 
 ## 1. The "Signal Amplitude" Argument (Physics)
-**Source:** [extension.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/extension.md)
+**Source:** [extension.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/extension.md)
 
 *   **The Problem:** Your hardware (ESP32) has a **12-bit ADC** (4096 levels). The MIT AlterEgo used a **24-bit ADC** (16.7 million levels).
 *   **The Consequence:** Subtle "Covert" tongue movements (Study A) generate signals in the **5-20 μV** range. On your hardware, this sits comfortably within the quantization noise. You are effectively trying to listen to a whisper in a hurricane.
@@ -11,7 +11,7 @@ You asked for the **reason** based on the literature. Here is the evidence-based
 *   **Scientific Verdict:** You *need* this amplitude boost to get above your hardware's noise floor. Study A does not provide it.
 
 ## 2. The "Anatomical" Argument (Placement)
-**Source:** [expert_roundtable_feb9.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/expert_roundtable_feb9.md) and [Kapur et al.](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/p43-kapur_BRjFwE6.pdf)
+**Source:** [expert_roundtable_feb9.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/expert_roundtable_feb9.md) and [Kapur et al.](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/p43-kapur_BRjFwE6.pdf)
 
 *   **The Ranking:** Kapur's data-driven ranking places the **Mental (Chin)** at #1, but **Inner/Outer Laryngeal (Throat)** at #2 and #3.
 *   **The Insight:** The chin measures *articulation* (tongue position), but the throat measures *phonation intent* (vocal cord tension).
@@ -19,7 +19,7 @@ You asked for the **reason** based on the literature. Here is the evidence-based
 *   **Scientific Verdict:** The throat sensor acts as a **"Voice Activity Detector" (VAD)** for the silent era. Without it (Study A), your model hallucinates commands during silence.
 
 ## 3. The "Data Efficiency" Argument (Machine Learning)
-**Source:** [foundation.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/foundation.md) vs [extension.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/extension.md)
+**Source:** [foundation.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/foundation.md) vs [extension.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/extension.md)
 
 *   **The Requirement:** The original AlterEgo model was trained on **31 hours** of data to achieve 92% accuracy on pure silent speech.
 *   **Your Constraint:** You have ~15-30 minutes of data recording per session.
@@ -27,7 +27,7 @@ You asked for the **reason** based on the literature. Here is the evidence-based
 *   **Scientific Verdict:** Trying to train a "Silent" model from scratch (Study A) with 1% of the original data volume is mathematically impossible. Transferring from "Exaggerated" (Study B) is the only cheat code that fits your timeline.
 
 ## 4. The "Neuro-Cognitive" Argument
-**Source:** [nieto.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/nieto.md)
+**Source:** [nieto.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/papers/nieto.md)
 
 *   **The Complexity:** Inner speech is not just "weak speech." It involves different neural pathways (inhibition of motor execution).
 *   **The Flaw in Study A:** Study A assumes that "Thinking about moving tongue" = "Moving tongue but weaker". This is a dangerous assumption.

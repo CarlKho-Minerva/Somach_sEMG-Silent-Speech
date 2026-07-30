@@ -4,7 +4,7 @@
 ============================================================
 
 Traceback (most recent call last):
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp1_specaugment/run.py", line 25, in <module>
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp1_specaugment/run.py", line 25, in <module>
     from utils.model import EMG_CNN
 ModuleNotFoundError: No module named 'utils'
 
@@ -14,13 +14,13 @@ ModuleNotFoundError: No module named 'utils'
   RUNNING: Experiment 2: Feature Importance
 ============================================================
 
-/Users/cvk/.matplotlib is not a writable directory
-Matplotlib created a temporary cache directory at /tmp/matplotlib-sdct8kct because there was an issue with the default path (/Users/cvk/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+/Users/carl/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-sdct8kct because there was an issue with the default path (/Users/carl/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
 
 Fontconfig error: No writable cache directories
 	/opt/homebrew/var/cache/fontconfig
-	/Users/cvk/.cache/fontconfig
-	/Users/cvk/.fontconfig
+	/Users/carl/.cache/fontconfig
+	/Users/carl/.fontconfig
 Fontconfig warning: ignoring en_US-u-hc-h12-u-ca-gregory-u-nu-latn: not a valid region tag
 Matplotlib is building the font cache; this may take a moment.
 ============================================================
@@ -28,10 +28,10 @@ Matplotlib is building the font cache; this may take a moment.
 ============================================================
 ✅ 0 samples
 Traceback (most recent call last):
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 176, in <module>
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 176, in <module>
     if __name__ == "__main__": main()
                                ~~~~^^
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 87, in main
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/run.py", line 87, in main
     X_tr,X_te,y_tr,y_te=train_test_split(X,y,test_size=0.2,random_state=SEED,stratify=y)
                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/homebrew/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
@@ -60,10 +60,10 @@ ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting t
 ============================================================
 ✅ 0 samples
 Traceback (most recent call last):
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 153, in <module>
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 153, in <module>
     if __name__ == "__main__": main()
                                ~~~~^^
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 82, in main
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/run.py", line 82, in main
     X_tr,X_te,y_tr,y_te=train_test_split(X,y,test_size=0.2,random_state=SEED,stratify=y)
                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/opt/homebrew/lib/python3.14/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
@@ -88,7 +88,7 @@ ValueError: With n_samples=0, test_size=0.2 and train_size=None, the resulting t
 ============================================================
 
 Traceback (most recent call last):
-  File "/Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp4_raw_signal_cnn/run.py", line 13, in <module>
+  File "/Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp4_raw_signal_cnn/run.py", line 13, in <module>
     import scipy.signal
   File "/opt/homebrew/lib/python3.14/site-packages/scipy/signal/__init__.py", line 306, in <module>
     from ._support_alternative_backends import *

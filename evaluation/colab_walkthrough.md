@@ -145,5 +145,5 @@ Five different random seeds all produce 50-52%. **Results are reproducible**, no
 - **Notebook:** [022826FinalCapstone.ipynb](https://colab.research.google.com/drive/1vByQDtNsl-RW0PLcGGFF6_8GqmgMUbaI?authuser=1)
 - **Hardware:** NVIDIA A100-SXM4-80GB · 167 GB RAM · 235 GB disk
 - **Runtime:** 29.6 minutes (1,773 seconds)
-- **Full results:** [results_summary.md](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/022826_code/results_summary.md)
-- **Script:** [rigorous_eval_colab.py](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/022826_code/colab_package/rigorous_eval_colab.py)
+- **Full results:** [results_summary.md](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/022826_code/results_summary.md)
+- **Script:** [rigorous_eval_colab.py](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/022826_code/colab_package/rigorous_eval_colab.py)

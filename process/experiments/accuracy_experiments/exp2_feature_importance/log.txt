@@ -1,10 +1,10 @@
-/Users/cvk/.matplotlib is not a writable directory
-Matplotlib created a temporary cache directory at /tmp/matplotlib-jzt5aeoc because there was an issue with the default path (/Users/cvk/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+/Users/carl/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-jzt5aeoc because there was an issue with the default path (/Users/carl/.matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
 
 Fontconfig error: No writable cache directories
 	/opt/homebrew/var/cache/fontconfig
-	/Users/cvk/.cache/fontconfig
-	/Users/cvk/.fontconfig
+	/Users/carl/.cache/fontconfig
+	/Users/carl/.fontconfig
 Fontconfig warning: ignoring en_US-u-hc-h12-u-ca-gregory-u-nu-latn: not a valid region tag
 Matplotlib is building the font cache; this may take a moment.
 ============================================================
@@ -27,7 +27,7 @@ RF Accuracy: 56.1%
 weighted avg       0.54      0.56      0.55       187
 
 
-💾 Plot saved to /Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/results/feature_importance.png
+💾 Plot saved to /Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/results/feature_importance.png
 
 📊 TEMPORAL DISTRIBUTION OF IMPORTANCE:
    Onset  (t=0-20):   100.0%

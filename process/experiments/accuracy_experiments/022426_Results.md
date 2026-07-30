@@ -37,7 +37,7 @@ During training, randomly zero out 2 time blocks (max 3 frames each) and 1 frequ
 **Conclusion:** Only revisit SpecAugment after 3x more data (multi-session recording).
 
 ### Evidence
-- [exp1_specaugment/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp1_specaugment/log.txt)
+- [exp1_specaugment/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp1_specaugment/log.txt)
 
 ---
 
@@ -64,8 +64,8 @@ The RF model puts **all discriminative weight in the first 20 time steps** — t
 > articulatory trajectories — a finding consistent with the AD8232's 10-bit ADC limitation."
 
 ### Evidence
-- [Feature importance heatmap](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/results/feature_importance.png)
-- [exp2_feature_importance/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/log.txt)
+- [Feature importance heatmap](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/results/feature_importance.png)
+- [exp2_feature_importance/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp2_feature_importance/log.txt)
 
 ---
 
@@ -85,7 +85,7 @@ The RF model puts **all discriminative weight in the first 20 time steps** — t
 **All classes pass.** No artifact-based classification detected. SILENCE is the strongest signal (muscle relaxation = very distinct EMG pattern). LEFT is weakest (1.7pp) — lateral tongue movement produces minimal throat EMG.
 
 ### Evidence
-- [exp3_permutation_integrity/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/log.txt)
+- [exp3_permutation_integrity/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp3_permutation_integrity/log.txt)
 
 ---
 
@@ -105,7 +105,7 @@ Feed raw filtered 2-channel EMG (500 samples, 2 channels) directly into a deeper
 **Same peak accuracy, but MFCCs are far more stable.** The raw CNN reached 83.5% training / 21.9% test at one point (extreme overfitting). MFCCs are the correct representation for this hardware — they provide a stable, compressed representation that prevents the CNN from memorizing raw temporal noise.
 
 ### Evidence
-- [exp4_raw_signal_cnn/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp4_raw_signal_cnn/log.txt)
+- [exp4_raw_signal_cnn/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp4_raw_signal_cnn/log.txt)
 
 ---
 
@@ -133,7 +133,7 @@ Using the original Feb 11 intra-session data (1,500 samples across 5 phases). Co
 **Phase weighting slightly worse (-2.7pp).** The cosine annealing schedule doesn't help when the domain shift between phases (overt → covert) is too large. LEFT has 0% recall — the phase-weighted model completely ignores it. Note: both methods score ~45% on all-phase data, which is expected (testing includes both easy and hard phases).
 
 ### Evidence
-- [exp5_phase_weighted/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp5_phase_weighted/log.txt)
+- [exp5_phase_weighted/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp5_phase_weighted/log.txt)
 
 ---
 
@@ -154,7 +154,7 @@ When forced to rely entirely on the middle of the recording, the model completel
 **What this means:** The AD8232 hardware (or the current placement) *physically cannot capture* the subtle, sustained mid-signal articulatory trajectories. The "exaggerated movements in the middle" are happening, but the cheap $40 analog front-end does not possess the signal-to-noise ratio to record them. The ONSET (jaw clench/initiation) is a violent, high-amplitude burst — that's the only thing the hardware can reliably hear.
 
 ### Evidence
-- [exp6_onset_masking/log.txt](file:///Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp6_onset_masking/log.txt)
+- [exp6_onset_masking/log.txt](file:///Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/sessions/022426_AccuracyExperiments/exp6_onset_masking/log.txt)
 
 ---
 

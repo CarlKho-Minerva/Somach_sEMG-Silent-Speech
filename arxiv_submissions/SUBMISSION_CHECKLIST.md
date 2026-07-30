@@ -33,7 +33,7 @@ After Paper 1 is accepted and you receive its arXiv ID (format: `XXXX.XXXXX`):
 1. **Update Paper 2** — In `paper2_UPDATED/main.tex`, find `\bibitem{kho2026companion}` and replace `XXXX.XXXXX` with the actual arXiv ID.
 2. **Rebuild Paper 2 archive:**
    ```bash
-   cd /Users/cvk/Downloads/carl/phase1-5/CP-PHASE4-2-sEMG_arXiv_Papers_25TPE
+   cd /Users/carl/Downloads/carl/phase1-5/CP-PHASE4-2-sEMG_arXiv_Papers_25TPE
    tar -czf arxiv_submissions/paper2_studyA_electrode.tar.gz \
      -C paper2_UPDATED main.tex arxiv.sty figures
    ```

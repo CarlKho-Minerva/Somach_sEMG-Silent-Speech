@@ -63,7 +63,7 @@ Two values after the timestamp = 2 channels detected. **Close Serial Monitor bef
 
 ```bash
 # Activate the virtual environment first
-cd /Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code
+cd /Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code
 source .venv/bin/activate
 
 # Then navigate to your study directory and run from there
@@ -132,7 +132,7 @@ After recording all phases, stay in the session directory and run these **in ord
 
 ```bash
 # Make sure venv is active (if not already):
-# source /Users/cvk/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/.venv/bin/activate
+# source /Users/carl/Downloads/carl/md-capstonefall25_25TPE/master-progress-list/020526_INSTRUCTABLES_GuideForMeEveryone/code/.venv/bin/activate
 
 # You should already be in:
 # code/sessions/StudyA_Lingual/  (or StudyB_Subvocal/)
